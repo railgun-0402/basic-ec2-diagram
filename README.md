@@ -12,5 +12,6 @@ S3にAWS構成図をアップロードしたら、構成図通りの構築を自
 
 ## 構成図例
 
+※内容は適当
 
-![Uploading 299de1e03645-20241019.png…]()
+![aws構成図](https://github.com/user-attachments/assets/e6bb2b8c-9062-4b62-a9bb-2c9c60341786)
