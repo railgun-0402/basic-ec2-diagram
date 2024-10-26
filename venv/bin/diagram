@@ -1,0 +1,6 @@
+#!/Users/sugawaradaiki/PycharmProjects/basic-ec2-diagram/venv/bin/python
+
+import diagram
+import sys
+
+sys.exit(diagram.run())

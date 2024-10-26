@@ -1,16 +1,18 @@
-# This is a sample Python script.
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from diagrams import Diagram, Cluster
+from diagrams.aws.network import VPC, PublicSubnet, InternetGateway
+from diagrams.aws.compute import EC2
+
+with Diagram("AWS構成図", show=False):
+    igw = InternetGateway("Internet Gateway")
+    with Cluster('VPC'):
+
+        vpc = VPC("VPC")
+        pub_subnet = PublicSubnet("Public Subnet")
+
+        with Cluster("Public Subnet"):
+            ec2 = EC2("EC2")
+
+    igw >> vpc >> pub_subnet >> ec2
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
